@@ -1,10 +1,52 @@
 # flask-tut-2023a
 Flask app created by following the Flask online tutorial step by step instructions at https://flask.palletsprojects.com/en/2.3.x/tutorial/
 
-This README file is based on the Flask tutorial README file which is located by following the instructions at https://flask.palletsprojects.com/en/2.3.x/contributing/#first-time-setup-using-github-codespaces
+This README file is based on the Flask tutorial README located by following the instructions at https://flask.palletsprojects.com/en/2.3.x/contributing/#first-time-setup-using-github-codespaces
 
 This 20230818FlaskTutorial  was a prerequisite for a separate tutorial 2021CreateModelLayer. 
 
+--------------------------------------------------
+--------------------------------------------------
+#### The steps for starting in a virtual environment are:
+
+
+In mac terminal, create virtual environment
+(this step does not seem to work VSCode terminal) 
+Mac/Windows Install instructions can be found here
+https://flask.palletsprojects.com/en/2.3.x/installation/
+
+create venv folder (this step is only needed once for each venv)
+cd into flask-tut-2023a and run:
+$ python ‑m venv venv
+
+
+In VSCode terminal cd to flask-tut-2023a run
+$ source venv/bin/activate
+
+Note: after stopping venv server, this step must be re run to activate venv again
+
+Install Flask  (this step is only needed once for each venv)
+$ pip install Flask
+
+Before running the app, initialize the DB
+$ flask --app flaskr init-db
+
+Run the app
+$ flask --app flaskr run --debug
+
+View app at http://127.0.0.1:5000/
+
+
+To stop dev server, use steps necessary for your system
+for some macs Ctrl + D 
+or 
+lsof -i tcp:5000 
+[get pid]
+kill -9 pid
+close all terminals
+
+--------------------------------------------------
+--------------------------------------------------
 
 Flask
 =====
