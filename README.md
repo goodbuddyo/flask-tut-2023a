@@ -3,7 +3,6 @@ Flask app created by following the Flask online tutorial step by step instructio
 
 This README file is based on the Flask tutorial README located by following the instructions at https://flask.palletsprojects.com/en/2.3.x/contributing/#first-time-setup-using-github-codespaces
 
-This 20230818FlaskTutorial  was a prerequisite for a separate tutorial 2021CreateModelLayer. 
 
 --------------------------------------------------
 --------------------------------------------------
@@ -51,7 +50,6 @@ close all terminals
 Flask
 =====
 
-
 Flask is a lightweight `WSGI`_ web application framework. It is designed
 to make getting started quick and easy, with the ability to scale up to
 complex applications. It began as a simple wrapper around `Werkzeug`_
@@ -70,14 +68,26 @@ community that make adding new functionality easy.
 
 Installing
 ----------
+$ cd flask-tut-2023a
+$ python3 -m venv venv   #this creates a venv folder
+$ source venv/bin/activate  # will now see (venv) in the terminal
+
 
 Install and update using `pip`_:
 
 .. code-block:: text
 
-    $ pip install -U Flask
+(venv) $ pip install -U Flask
 
 .. _pip: https://pip.pypa.io/en/stable/getting-started/
+
+
+Starting
+----------
+cd to folder
+$ source venv/bin/activate
+$ flask --app flaskr run --debug
+http://127.0.0.1:5000/
 
 
 A Simple Example
@@ -100,25 +110,6 @@ A Simple Example
       * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 
-Contributing
-------------
-
-For guidance on setting up a development environment and how to make a
-contribution to Flask, see the `contributing guidelines`_.
-
-.. _contributing guidelines: https://github.com/pallets/flask/blob/main/CONTRIBUTING.rst
-
-
-Donate
-------
-
-The Pallets organization develops and supports Flask and the libraries
-it uses. In order to grow the community of contributors and users, and
-allow the maintainers to devote more time to the projects, `please
-donate today`_.
-
-.. _please donate today: https://palletsprojects.com/donate
-
 
 Links
 -----
@@ -131,3 +122,48 @@ Links
 -   Chat: https://discord.gg/pallets
 
 
+Notes:
+This 20230818FlaskTutorial  was a recommended prerequisite for a separate tutorial 2021CreateModelLayer. 
+Notes: /pluralsight/Python/Flask_a/FlaskDocumentation/20230818a_FlaskTutorial\
+/repos/python/flask-tut-2023a
+https://github.com/goodbuddyo/flask-tut-2023a
+
+### --------------------
+### Setup Notes
+
+clone from github
+https://github.com/pallets/flask/tree/main/examples/tutorial
+see /repos/python/flask-tut-2023a
+cd ... flask-tut-2023a
+$ python -m venv venv      #this creates a venv folder
+$ source venv/bin/activate     # will now see (venv) in the terminal
+(venv) $ pip install Flask     # if not already installed in venv
+
+To start the server
+Run the app
+	$ flask --app flaskr run --debug
+
+To stop the server, run
+  lsof -i tcp:5000  >  [get the PID]  > kill -9 PID
+
+View in browser
+	http://127.0.0.1:5000/hello
+
+
+### notes --------------------
+
+$ mkdir flaskr
+Create file /flaskr/__init__.py 
+  def create_app(test_config=None):
+    ....
+  return app    
+Create db file 	flaskr/db.py
+  def get_db():
+    ...
+    return g.db
+  def close_db(e=None):
+Create flaskr/schema.sql
+  CREATE TABLE user (
+    ...
+  CREATE TABLE post (
+    ...
