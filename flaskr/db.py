@@ -3,6 +3,8 @@ import sqlite3
 import click
 from flask import current_app, g
 
+# get_db() returns a database connection
+
 
 def get_db():
     if 'db' not in g:
@@ -23,12 +25,14 @@ def close_db(e=None):
 
 
 # functions to get db init_db with schema and init_db_command
-
 def init_db():
     db = get_db()
-
+    # get_db() returns a database connection
+    # open_resource() opens schema.sql file
     with current_app.open_resource('schema.sql') as f:
         db.executescript(f.read().decode('utf8'))
+
+# define cli command to call init_db() and display success msg
 
 
 @click.command('init-db')
