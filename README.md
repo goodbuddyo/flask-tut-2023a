@@ -1,7 +1,7 @@
 # flask-tut-2023a
-Flask app created by following the Flask online tutorial step by step instructions at https://flask.palletsprojects.com/en/2.3.x/tutorial/
+Flask app from the Flask online tutorial step by step instructions at https://flask.palletsprojects.com/en/2.3.x/tutorial/
 
-This README file is based on the Flask tutorial README located by following the instructions at https://flask.palletsprojects.com/en/2.3.x/contributing/#first-time-setup-using-github-codespaces
+This README file is based on the instructions at https://flask.palletsprojects.com/en/2.3.x/contributing/#first-time-setup-using-github-codespaces
 
 
 --------------------------------------------------
