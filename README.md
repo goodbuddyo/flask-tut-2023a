@@ -16,13 +16,14 @@ https://flask.palletsprojects.com/en/2.3.x/installation/
 
 create venv folder (this step is only needed once for each venv)
 cd into flask-tut-2023a and run:
-$ python ‑m venv venv
+$ python ‑m venv .venv
 
 
 In VSCode terminal cd to flask-tut-2023a run
-$ source venv/bin/activate
+$ source .venv/bin/activate
 
 Note: after stopping venv server, this step must be re run to activate venv again
+$ source .venv/bin/activate
 
 Install Flask  (this step is only needed once for each venv)
 $ pip install Flask
